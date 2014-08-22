@@ -124,8 +124,28 @@ a small {
 
 .wrapper {
   padding:50px;
-  width:860px;
+  width:960px;
   margin:0 auto;
+}
+
+#portfolio ul li{
+  float:left;
+  width:200px;
+  height:200px;
+  margin:10px;
+  background-color:pink;
+  list-style-type:none;
+
+}
+
+#media ul li{
+  float:left;
+  width:200px;
+  height:200px;
+  margin:10px;
+  background-color:#f2f2f2;
+  list-style-type:none;
+
 }
 
 blockquote {
@@ -238,7 +258,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:600px;
   float:right;
   padding-bottom:50px;
 }
