@@ -5,6 +5,8 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
+  activate :directory_indexes
+  set :index_file, "index.html"
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
   blog.permalink = "blog/{category}/{title}.html"
