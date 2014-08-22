@@ -47,11 +47,11 @@
 #   end
 # end
 
-set :css_dir, 'css'
+set :css_dir, 'stylesheets'
 
-set :js_dir, 'js'
+set :js_dir, 'javascripts'
 
-set :images_dir, 'img'
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
@@ -64,7 +64,7 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  Use relative URLs
+  # Use relative URLs
   # activate :relative_assets
 
   # Or use a different image path
