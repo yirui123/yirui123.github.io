@@ -5,9 +5,9 @@ if(isset($_POST['message'])){
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$message = $_POST['message'];
-    
-	
-	$to      = 'you@example.com';
+
+
+	$to      = 'ms.yi.rui@gmail.com';
 	$subject = 'Site Contact Form';
 
 	$headers = 'From: '. $email . "\r\n" .
@@ -16,17 +16,17 @@ if(isset($_POST['message'])){
 
 	$status = mail($to, $subject, $message, $headers);
 
-	if($status == TRUE){	
+	if($status == TRUE){
 		$res['sendstatus'] = 'done';
-	
+
 		//Edit your message here
 		$res['message'] = 'Form Submission Successful';
     }
 	else{
-		$res['message'] = 'Failed to send mail. Please mail me to you@example.com';
+		$res['message'] = 'Failed to send mail. Please email me directly at ms.yi.rui@gmail.com';
 	}
-	
-	
+
+
 	echo json_encode($res);
 }
 
