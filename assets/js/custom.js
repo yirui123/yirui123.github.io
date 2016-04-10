@@ -4,6 +4,7 @@
 	 * Preloader
 	/* ---------------------------------------------- */
 
+
 	$(window).load(function() {
 		$('#status').fadeOut();
 		$('#preloader').delay(300).fadeOut('slow');
@@ -31,6 +32,14 @@
 				$('.scroll-up').fadeOut();
 			}
 		});
+		/* ---------------------------------------------- /*
+		 * type
+		/* ---------------------------------------------- */
+
+		$(".start").typed({
+            strings: ["Bienvenue stranger! My name is Yi Rui, unless you land here<br /> by pure accident, feel free to scroll down and critique my work. <br /><br /><strong>- Fasten your seatbelt it's going to be a bumpy ride."],
+            typeSpeed: 60,
+        });
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -54,13 +63,13 @@
         $('.skills').waypoint(function(){
             $('.chart').each(function(){
             $(this).easyPieChart({
-                    size:140,
+                    size:100,
                     animate: 2000,
                     lineCap:'butt',
                     scaleColor: false,
-                    barColor: '#FF5252',
-                    trackColor: 'transparent',
-                    lineWidth: 10
+                    barColor: '#FF0000',
+                    trackColor: '#ffffff',
+                    lineWidth: 5
                 });
             });
         },{offset:'80%'});
