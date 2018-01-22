@@ -54,7 +54,7 @@ function Symbol(x, y, speed, first, last) {
 
   this.setToRandomSymbol = function() {
     if (frameCount % this.switchInterval == 0) {
-      var emojiArray = [0x1F349, 0x1F351, 0x1F355, 0x1F359, 0x1F357, 0x1F35D, 0x1F364, 0x1F363, 0x1F369, 0x1F371, 0x1F372, 0x1F37B];
+      var emojiArray = [0x1F344, 0x1F344, 0x1F344, 0x1F349, 0x1F351, 0x1F355, 0x1F359, 0x1F357, 0x1F35D, 0x1F364, 0x1F363, 0x1F369, 0x1F371, 0x1F372, 0x1F37B];
       var ranEmo = emojiArray[Math.floor(Math.random() * emojiArray.length)];
       this.value = String.fromCodePoint(
         ranEmo
