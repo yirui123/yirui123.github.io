@@ -23,7 +23,7 @@ function setup() {
 }
 
 function loadText() {
-  var aboutMe = createP('hi there, my name is Yi Rui, I am a front-end developer/daydreamer living in New York. I like code, art, graphics and sometimes sci-fi stories. <a href="mailto:yirui.nyc@gmail.com">thoughts?</a>');
+  var aboutMe = createP('hi there, my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <a href="mailto:yirui.nyc@gmail.com">thoughts?</a>');
   aboutMe.addClass('aboutMe');
 }
 
