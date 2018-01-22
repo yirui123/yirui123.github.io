@@ -54,7 +54,7 @@ function Symbol(x, y, speed, first, last) {
 
   this.setToRandomSymbol = function() {
     if (frameCount % this.switchInterval == 0) {
-      var emojiArray = [0x1F344, 0x1F344, 0x1F344, 0x1F349, 0x1F351, 0x1F355, 0x1F359, 0x1F357, 0x1F35D, 0x1F364, 0x1F363, 0x1F369, 0x1F371, 0x1F372, 0x1F37B];
+      var emojiArray = [0x1F344, 0x1F349, 0x1F351, 0x1F355, 0x1F359, 0x1F357, 0x1F35D, 0x1F364, 0x1F363, 0x1F369, 0x1F371, 0x1F372, 0x1F37B];
       var ranEmo = emojiArray[Math.floor(Math.random() * emojiArray.length)];
       this.value = String.fromCodePoint(
         ranEmo
@@ -77,7 +77,7 @@ function Stream() {
   this.generateSymbols = function(x, y) {
     // var y = 0;
     // var x = width / 2;
-    var first = round(random(0, 4)) == 1;
+    var first = round(random(0, 5)) == 1;
     var last = round(random(0, 2)) == 1;
     for (var i = 0; i <= this.totalSymbols; i++) {
       symbol = new Symbol(x, y, this.speed, first, last);
@@ -107,11 +107,11 @@ function Stream() {
     rotate(0);
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
-        fill(0, 0, 0);
+        fill(0, 0, 0, 255);
       } else if (symbol.last) {
         fill(0, 0, 0, 255);
       } else {
-        fill(0, 0, 255, 200);
+        fill(0, 0, 255, 155);
       }
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
