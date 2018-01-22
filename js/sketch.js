@@ -8,7 +8,7 @@ function setup() {
   var title = createP('for the hungry ones');
   title.addClass('title');
 
-  button = createButton('about me');
+  button = createButton('about');
   button.mousePressed(loadText);
   textSize(symbolSize);
   var x = 0;
@@ -23,17 +23,25 @@ function setup() {
 }
 
 function loadText() {
-  var aboutMe = createP('hi there, my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <a href="mailto:yirui.nyc@gmail.com">thoughts?</a>');
+  var aboutMe = createP('hi there, hope you like to eat. my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <a href="mailto:yirui.nyc@gmail.com">thoughts?</a>');
   aboutMe.addClass('aboutMe');
 }
 
 function draw() {
-  background(10, 186, 155 + noise(mouseX, mouseY) * 50, 200);
+  background(random(10, 50), 186, 155 + noise(mouseX, mouseY) * 100, 155);
   streams.forEach(function(stream) {
     stream.render();
   });
 
 }
+
+function mouseMoved() {
+  streams.forEach(function(stream) {
+    stream.update();
+  });
+}
+
+
 
 function Symbol(x, y, speed, first, last) {
   this.x = x;
@@ -54,15 +62,7 @@ function Symbol(x, y, speed, first, last) {
     } else {
       return false;
     }
-
   }
-
-  // this.render = function(){
-  //   fill(0, 255, 70);
-  //   text(this.value, this.x, this.y);
-  //   this.rain();
-  //   this.setToRandomSymbol();
-  // }
 
   this.rain = function() {
     this.y = (this.y >= height) ? 0 : this.y += this.speed;
@@ -84,13 +84,27 @@ function Stream() {
       symbol.setToRandomSymbol();
       this.symbols.push(symbol);
       y -= symbolSize * 2;
-      // x -= symbolSize;
+      // x -= symbolSize * 2;
       first = false;
       last = false;
+
     }
   }
 
+  this.update = function() {
+    translate(width / 2, height / 2);
+    rotate(PI / 2);
+    this.symbols.forEach(function(symbol) {
+      fill(0, 0, 0);
+      text(symbol.value, symbol.x, symbol.y);
+      symbol.rain();
+      symbol.setToRandomSymbol();
+    });
+  }
+
   this.render = function() {
+    translate(0, 0);
+    rotate(0);
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
         fill(0, 0, 0);
