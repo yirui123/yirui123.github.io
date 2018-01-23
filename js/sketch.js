@@ -4,12 +4,11 @@ var streams = [];
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  background(0);
   var title = createP('for the hungry ones');
   title.addClass('title');
 
   button = createButton('about');
-  button.mousePressed(loadText);
+  button.mouseClicked(loadText);
   textSize(symbolSize);
   var x = 0;
   // var y = 0;
@@ -19,6 +18,7 @@ function setup() {
     streams.push(stream);
     x += symbolSize * 5;
   }
+  ellipse(mouseX.mouseY, 1, 1);
 
 }
 
@@ -28,7 +28,7 @@ function loadText() {
 }
 
 function draw() {
-  background(random(10, 50), 186, 155 + noise(mouseX, mouseY) * 100, 155);
+  background(10, 186, 155 + noise(mouseX, mouseY) * 100, 155);
   streams.forEach(function(stream) {
     stream.render();
   });
@@ -72,12 +72,10 @@ function Symbol(x, y, speed, first, last) {
 
 function Stream() {
   this.symbols = [];
-  this.totalSymbols = round(random(5, 20));
+  this.totalSymbols = round(random(2, 15));
   this.speed = random(1, 3);
   this.generateSymbols = function(x, y) {
-    // var y = 0;
-    // var x = width / 2;
-    var first = round(random(0, 5)) == 1;
+    var first = round(random(0, 3)) == 1;
     var last = round(random(0, 2)) == 1;
     for (var i = 0; i <= this.totalSymbols; i++) {
       symbol = new Symbol(x, y, this.speed, first, last);
@@ -95,7 +93,7 @@ function Stream() {
     translate(width / 2, height / 2);
     rotate(PI / 2);
     this.symbols.forEach(function(symbol) {
-      fill(0, 0, 0);
+      fill(0, 0, 0, 255);
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
       symbol.setToRandomSymbol();
@@ -111,7 +109,7 @@ function Stream() {
       } else if (symbol.last) {
         fill(0, 0, 0, 255);
       } else {
-        fill(0, 0, 255, 155);
+        fill(0, 0, 0, 200);
       }
       text(symbol.value, symbol.x, symbol.y);
       symbol.rain();
