@@ -23,7 +23,7 @@ function setup() {
 }
 
 function loadText() {
-  var aboutMe = createP('hi there, hope you like to eat. my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <a href="mailto:yirui.nyc@gmail.com">thoughts?</a>');
+  var aboutMe = createP('hi there, hope you like to eat. my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <br/> <a href="mailto:yirui.nyc@gmail.com">thoughts?</a> <br/> <a href="https://ooopschat.herokuapp.com/">chat?</a>');
   aboutMe.addClass('aboutMe');
 }
 
