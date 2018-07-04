@@ -1,0 +1,171 @@
+/* line 1, ../sass/style.scss */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'VT323', monospace;
+  cursor: url("icon/cat.png"), default;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 12, ../sass/style.scss */
+.myMiner {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* line 18, ../sass/style.scss */
+  .myMiner {
+    display: none;
+  }
+}
+/* line 23, ../sass/style.scss */
+.coinhive-miner {
+  opacity: 0.5;
+}
+
+/* line 27, ../sass/style.scss */
+.myMiner p {
+  padding: 0;
+  opacity: 0.8;
+  line-height: 0.8;
+}
+
+/* line 33, ../sass/style.scss */
+.title {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  font-size: 34px;
+  width: 30%;
+  max-width: 100px;
+}
+
+/* line 42, ../sass/style.scss */
+button {
+  position: absolute;
+  top: 140px;
+  left: 5%;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+  background: none;
+  outline: 0;
+  padding: 0 !important;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* line 56, ../sass/style.scss */
+.aboutMe {
+  position: absolute;
+  top: 160px;
+  left: 5%;
+  width: 70%;
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+/* line 65, ../sass/style.scss */
+.aboutMe a {
+  animation: blink-animation 2s steps(5, end) infinite;
+}
+@keyframes blink-animation {
+  to {
+    opacity: 0.5;
+    color: #000;
+  }
+}
+/* line 76, ../sass/style.scss */
+#frontEnd {
+  background: #000;
+  opacity: 0.9;
+  border-radius: 50%;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5% auto;
+  color: #FFF;
+  display: none;
+  padding: 10%;
+  text-align: center;
+}
+/* line 94, ../sass/style.scss */
+#frontEnd ul li {
+  text-align: left;
+}
+/* line 98, ../sass/style.scss */
+#frontEnd a {
+  color: #FFF;
+}
+
+/* line 103, ../sass/style.scss */
+#creativeCoding {
+  background: #000;
+  opacity: 0.9;
+  border-radius: 50%;
+  margin: 5% auto;
+  padding: 10%;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 1;
+}
+
+/* line 132, ../sass/style.scss */
+.slides {
+  width: 300px;
+  height: 300px;
+}
+/* line 136, ../sass/style.scss */
+.slides img {
+  width: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+/* line 143, ../sass/style.scss */
+.slides .overlay {
+  transition: 0.5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 153, ../sass/style.scss */
+.slides .overlay .text {
+  color: #FFF;
+}
+
+/* line 177, ../sass/style.scss */
+.slider > a {
+  display: inline-flex;
+  color: #000;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* line 186, ../sass/style.scss */
+.slider > a:focus {
+  background: #000;
+}

@@ -1,0 +1,188 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'VT323', monospace;
+  cursor: url('icon/cat.png'), default;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myMiner {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+@media only screen and (max-device-width: 480px) {
+  .myMiner {
+    display: none;
+  }
+}
+
+.coinhive-miner {
+  opacity: 0.5;
+}
+
+.myMiner p {
+  padding: 0;
+  opacity: 0.8;
+  line-height: 0.8;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  font-size: 34px;
+  width: 30%;
+  max-width: 100px;
+}
+
+button {
+  position: absolute;
+  top: 140px;
+  left: 5%;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+  background: none;
+  outline: 0;
+  padding: 0 !important;
+  margin: 0;
+  cursor: pointer;
+}
+
+.aboutMe {
+  position: absolute;
+  top: 160px;
+  left: 5%;
+  width: 70%;
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 1.5;
+  //display: none;
+  a {
+    animation: blink-animation 2s steps(5, end) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      opacity: 0.5;
+      color: #000;
+    }
+  }
+}
+
+#frontEnd {
+  background: #000;
+  opacity: 0.9;
+  border-radius: 50%;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5% auto;
+  color: #FFF;
+  display: none;
+  padding: 10%;
+  text-align: center;
+
+  ul li {
+    text-align: left;
+  }
+
+  a {
+    color: #FFF;
+  }
+}
+
+#creativeCoding {
+  background: #000;
+  opacity: 0.9;
+  border-radius: 50%;
+  margin: 5% auto;
+  padding: 10%;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 1;
+}
+// .slider-wrap {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .slider {
+//   width: 300px;
+//   text-align: center;
+//   overflow: hidden;
+// }
+
+.slides {
+  width: 300px;
+  height: 300px;
+
+  img {
+    //opacity: 0.9;
+    width: 100%;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+  .overlay {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+
+    .text {
+      color: #FFF;
+    }
+  }
+}
+// .slides > div {
+//   transform: scale(1);
+//   flex-shrink: 0;
+//   width: 300px;
+//   height: 300px; // border-radius: 10px;
+//   // background: #eee;
+//   transform-origin: center center;
+//   transform: scale(1);
+//   transition: transform 0.5s;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: cente;
+// }
+//
+// .slides > div:target {
+//   transform: scale(0.8);
+// }
+
+.slider > a {
+  display: inline-flex;
+  color: #000;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slider > a:focus {
+  background: #000;
+}

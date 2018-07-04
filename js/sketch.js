@@ -1,5 +1,5 @@
 var symbol;
-var symbolSize = 18;
+var symbolSize = 28;
 var streams = [];
 
 function setup() {
@@ -7,9 +7,7 @@ function setup() {
   background(0);
   var title = createP('for the hungry ones');
   title.addClass('title');
-
   button = createButton('about');
-  button.mousePressed(loadText);
   textSize(symbolSize);
   var x = 0;
   // var y = 0;
@@ -22,17 +20,11 @@ function setup() {
 
 }
 
-function loadText() {
-  var aboutMe = createP('hi there, hope you like to eat. my name is Yi Rui, I am a front-end developer/daydreamer living in New York with no savings nor crytokitties. I like code, art, graphics and sometimes sci-fi stories. <br/> <a href="mailto:yirui.nyc@gmail.com">thoughts?</a> <br/> <a href="https://ooopschat.herokuapp.com/">chat?</a>');
-  aboutMe.addClass('aboutMe');
-}
-
 function draw() {
-  background(random(10, 50), 186, 155 + noise(mouseX, mouseY) * 100, 155);
+  background(255, 155);
   streams.forEach(function(stream) {
     stream.render();
   });
-
 }
 
 function mouseMoved() {
@@ -40,7 +32,6 @@ function mouseMoved() {
     stream.update();
   });
 }
-
 
 
 function Symbol(x, y, speed, first, last) {
@@ -72,7 +63,7 @@ function Symbol(x, y, speed, first, last) {
 
 function Stream() {
   this.symbols = [];
-  this.totalSymbols = round(random(5, 20));
+  this.totalSymbols = round(random(3, 13));
   this.speed = random(1, 3);
   this.generateSymbols = function(x, y) {
     // var y = 0;
