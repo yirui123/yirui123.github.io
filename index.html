@@ -140,18 +140,17 @@
     $("#openFrontEnd").on("mouseenter", function() {
       $("#frontEnd").show();
     });
-    $("#frontEnd").on("mouseleave", function() {
-      $(this).hide();
-    });
+    // $("#frontEnd").on("mouseleave", function() {
+    //   $(this).hide();
+    // });
 
     $("#openCreative").on("mouseenter", function() {
       $("#creativeCoding").show();
     });
-    $("#creativeCoding").on("mouseleave", function() {
-      $(this).hide();
-    });
+   // $("#creativeCoding").on("mouseleave", function() { // $(this).hide(); // });
 
     $(document).click(function(e) {
+
       if (e.target != $('#frontEnd')[0]) {
         $('#frontEnd').hide();
       }
