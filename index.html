@@ -150,6 +150,18 @@
     $("#creativeCoding").on("mouseleave", function() {
       $(this).hide();
     });
+
+    $(document).click(function(e) {
+      if (e.target != $('#frontEnd')[0]) {
+        $('#frontEnd').hide();
+      }
+
+      if (e.target != $('#creativeCoding')[0]) {
+        $('#creativeCoding').hide();
+      }
+
+    });
+
   });
 </script>
 
